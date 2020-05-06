@@ -4,47 +4,56 @@ import java.io.Serializable;
 
 /**
  * 
- * @ClassName: Category 
+ * @ClassName: Category
  * @Description: TODO
  * @author: 小冯
  * @date: 2020年4月27日 下午5:03:13
  */
-public class Category  implements Serializable{
-	
+public class Category implements Serializable {
+
 	/**
 	 * @fieldName: serialVersionUID
 	 * @fieldType: long
 	 * @Description: TODO
 	 */
 	private static final long serialVersionUID = 1L;
-	private Integer id;//编号
-	private String name;//分类名称
-	private Integer channelId;//所属栏目id
-	private Integer sorted;//排序
+	private Integer id;// 编号
+	private String name;// 分类名称
+	private Integer channelId;// 所属栏目id
+	private Integer sorted;// 排序
+
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public Integer getChannelId() {
 		return channelId;
 	}
+
 	public void setChannelId(Integer channelId) {
 		this.channelId = channelId;
 	}
+
 	public Integer getSorted() {
 		return sorted;
 	}
+
 	public void setSorted(Integer sorted) {
 		this.sorted = sorted;
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -53,6 +62,7 @@ public class Category  implements Serializable{
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -74,5 +84,5 @@ public class Category  implements Serializable{
 			return false;
 		return true;
 	}
-	
+
 }

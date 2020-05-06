@@ -242,6 +242,15 @@
 						<!--项目路径 -->
 						<host>localhost</host>
 					</httpConnector>
+					<!-- 配置jetty虚拟路径 -->
+				     <contextHandlers>
+				      <jettyWebAppContext>
+				       <!--虚拟路径  访问路径-->
+				       <contextPath>/img/</contextPath>
+				       <!-- 物理路径 -->
+				      <resourceBase>D:\\img</resourceBase>
+				      </jettyWebAppContext>
+				     </contextHandlers>
 					<!-- 扫描的配置. 如果项目源码改变,1秒后重启jetty -->
 					<scanIntervalSeconds>1</scanIntervalSeconds>
 				</configuration>

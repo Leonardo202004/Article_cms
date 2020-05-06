@@ -1,10 +1,15 @@
 package com.fengzhiwei.cms.service;
 
-import java.util.List;
-
 import com.fengzhiwei.cms.domain.Article;
+import com.github.pagehelper.PageInfo;
 
 public interface ArticleService {
 
-	List<Article> list();
+	PageInfo<Article> list(Article articles, Integer pageNum, Integer pageSize);
+
+	Article ArticleById(Integer id);
+
+	int insert(Article article);
+
+	int update(Article article);
 }
